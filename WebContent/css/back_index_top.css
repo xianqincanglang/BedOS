@@ -1,0 +1,43 @@
+#top{
+	width: 100%;
+	background-color: rgb(67,142,185);
+	height: 40px;
+}
+
+/* 顶部左边 */
+#top_left_list{
+	float: left;
+	margin-left: 30px;
+	margin-top: 12px;
+	
+}
+#top_left_list li{
+	list-style: none;
+	float: left;
+
+
+}
+
+#top_left_list li label{
+	color: white;
+	
+}
+
+/* 顶部右边 */
+#top_right_list{
+	position: relative;
+	list-style: none;
+	float: right;
+	margin-left: 20px;
+	margin-top: 12px;
+}
+
+#top_right_list li{
+	position: relative;
+	float: left;
+	margin-top: 0px;
+	margin-left: 10px;
+
+}
+
+

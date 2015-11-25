@@ -1,0 +1,111 @@
+
+a{
+    text-decoration: none;
+}
+li{
+
+    list-style-type: none;
+}
+
+
+#middle{
+    width: 100%;
+
+}
+
+#middle_left{
+    width: 15%;
+    background-color:rgb(245,245,245);
+    position: relative;
+
+}
+
+#middle_right{
+    width: 84%;
+    background-color: white;
+    border-left: 1px solid #cccccc;
+    position: relative;
+    float: right;
+}
+
+
+/*左边的导航*/
+#middle_left .left_first{
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    width: 100%;
+    float: left;
+    margin-top: -2px;
+    padding-left: 1px;
+    border-right: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+/*第一段按钮：4个操作*/
+#middle_left .left_first a{
+    text-decoration: none;
+    margin-left: 3px;
+}
+#middle_left .left_first a img{
+    width: 41px;
+    height: 31px;
+
+}
+
+
+
+
+/*第二个div，用于设置标题*/
+.left_second{
+    width: 100%;
+    border:solid 1px #cccccc;
+    position: relative;
+    float: left;
+}
+
+.subNavTitle{
+    border-bottom: 1px solid #e5e3da;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    color: #999;
+    line-height: 28px;
+    padding-left: 10px;
+    background: url("../images/back_index/jiantou1.jpg") no-repeat;
+    background-position: 95% 50%;
+}
+
+.subNavTitle:hover{
+    color: #277fc2;
+}
+
+.currentDd{
+    color: #277fc2;
+}
+
+.currentDt{
+    background-image: url("../images/back_index/jiantou.jpg");
+
+}
+
+.navContent{
+    display: none;
+    border-bottom: 1px solid #e5e3da;
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.navContent li a{
+    display: block;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+}
+
+.navContent li a:hover{
+    color: #ffffff;
+    background-color: #277fc2;
+}
