@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-27 20:15:26 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="hibernate.Notice" table="notice" catalog="bedos">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="65535" not-null="true" />
+        </property>
+        <property name="content" type="string">
+            <column name="content" length="65535" not-null="true" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="10" not-null="true" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="end_date" length="10" not-null="true" />
+        </property>
+        <property name="falg" type="string">
+            <column name="falg" length="2">
+                <comment>
+                1&#228;&#187;&#163;&#232;&#161;&#168;&#229;&#129;&#135;&#229;&#136;&#160;&#239;&#188;&#140;0&#228;&#187;&#163;&#232;&#161;&#168;&#231;&#156;&#159;&#229;&#136;&#160;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

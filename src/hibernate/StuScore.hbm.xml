@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-27 20:15:26 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="hibernate.StuScore" table="stu_score" catalog="bedos">
+        <id name="stuNum" type="string">
+            <column name="stu_num" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="5" not-null="true" />
+        </property>
+        <property name="score" type="int">
+            <column name="score" not-null="true" />
+        </property>
+        <property name="cose" type="string">
+            <column name="cose" length="65535" not-null="true" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
