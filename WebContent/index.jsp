@@ -9,6 +9,7 @@
 <body>
 	<p>aaa</p>
 	
-	<jsp:forward page="jsp/back_index.jsp"></jsp:forward>
+	 <%-- <jsp:forward page="jsp/back_index.jsp"></jsp:forward> --%>
+	 <jsp:forward page="jsp/login/login.jsp"></jsp:forward>
 </body>
 </html>

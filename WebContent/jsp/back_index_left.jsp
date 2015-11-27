@@ -13,10 +13,10 @@
 <body>
 	<div id="middle_left">
 			<div class="left_first">
-				<a><img src="images/back_index/back_index_info.png" alt="#"/></a>
-				<a><img src="images/back_index/back_index_alert.png" alt="#"/></a>
-				<a><img src="images/back_index/back_index_danger.png" alt="#"/></a>
-				<a><img src="images/back_index/back_index_set.png" alt="#"/></a>
+				<a><img src="images/back_index/back_index_info.png" alt="#"></img></a>
+				<a><img src="images/back_index/back_index_alert.png" alt="#"></img></a>
+				<a><img src="images/back_index/back_index_danger.png" alt="#"></img></a>
+				<a><img src="images/back_index/back_index_set.png" alt="#"></img></a>
 			</div>
 
 			<div class="left_second">

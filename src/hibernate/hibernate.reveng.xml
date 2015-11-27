@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="bedos" match-name=".*"/>
+  <table-filter match-catalog="bedos" match-name="admin_info"/>
+  <table-filter match-catalog="bedos" match-name="notice"/>
+  <table-filter match-catalog="bedos" match-name="repair"/>
+  <table-filter match-catalog="bedos" match-name="stu_info"/>
+  <table-filter match-catalog="bedos" match-name="stu_score"/>
+</hibernate-reverse-engineering>

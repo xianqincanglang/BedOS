@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-27 20:15:26 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="hibernate.Repair" table="repair" catalog="bedos">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="content" type="string">
+            <column name="content" length="65535" not-null="true" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" not-null="true" />
+        </property>
+        <property name="floorNum" type="string">
+            <column name="floor_num" length="3" not-null="true" />
+        </property>
+        <property name="dormNum" type="string">
+            <column name="dorm_num" length="3" not-null="true" />
+        </property>
+        <property name="tel" type="string">
+            <column name="tel" length="11" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

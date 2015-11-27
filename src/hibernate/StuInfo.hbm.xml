@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-27 20:15:26 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="hibernate.StuInfo" table="stu_info" catalog="bedos">
+        <id name="stuNum" type="string">
+            <column name="stu_num" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="stuName" type="string">
+            <column name="stu_name" length="5" not-null="true" />
+        </property>
+        <property name="stuAge" type="int">
+            <column name="stu_age" not-null="true" />
+        </property>
+        <property name="stuSex" type="string">
+            <column name="stu_sex" length="2" not-null="true" />
+        </property>
+        <property name="stuFloorNum" type="string">
+            <column name="stu_floor_num" length="2" not-null="true">
+                <comment>&#230;&#165;&#188;&#229;&#143;&#183;</comment>
+            </column>
+        </property>
+        <property name="stuDormNum" type="string">
+            <column name="stu_dorm_num" length="3" not-null="true">
+                <comment>&#229;&#174;&#191;&#232;&#136;&#141;&#229;&#143;&#183;</comment>
+            </column>
+        </property>
+        <property name="stuBedNum" type="int">
+            <column name="stu_bed_num" not-null="true">
+                <comment>&#229;&#186;&#138;&#228;&#189;&#141;&#229;&#143;&#183;</comment>
+            </column>
+        </property>
+        <property name="stuPwd" type="string">
+            <column name="stu_pwd" length="6" not-null="true" />
+        </property>
+        <property name="stuTel" type="string">
+            <column name="stu_tel" length="11" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -15,7 +15,7 @@
 			<div class="right_content_title">
 				<div class="rightTip">
 					<ul class="tip">
-						<li><img src="images/back_index/back_index.png" alt="#"/></li>
+						<li><img src="images/back_index/back_index.png" alt="#"></img></li>
 						<li><span>控制台</span></li>
 					</ul>
 				</div>
