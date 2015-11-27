@@ -1,38 +1,19 @@
 
-a{
-    text-decoration: none;
-}
-li{
-
-    list-style-type: none;
-}
 
 
-#middle{
-    width: 100%;
-
-}
 
 #middle_left{
-    width: 15%;
+    width: 100%;
     background-color:rgb(245,245,245);
     position: relative;
 
 }
 
-#middle_right{
-    width: 84%;
-    background-color: white;
-    border-left: 1px solid #cccccc;
-    position: relative;
-    float: right;
-}
+
 
 
 /*左边的导航*/
 #middle_left .left_first{
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
     width: 100%;
     float: left;
     margin-top: -2px;
@@ -62,6 +43,7 @@ li{
     position: relative;
     float: left;
 }
+
 
 .subNavTitle{
     border-bottom: 1px solid #e5e3da;
