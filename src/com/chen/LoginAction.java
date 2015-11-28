@@ -23,6 +23,7 @@ public class LoginAction extends ActionSupport{
 	
 	private String username;
 	private String password;
+	private String tip;
 	
 	public String getUsername() {
 		return username;
@@ -37,6 +38,13 @@ public class LoginAction extends ActionSupport{
 		this.password = password;
 	}
 	
+	
+	public void setTip(String tip){
+		this.tip = tip;
+	}
+	public String getTip(){
+		return this.tip;
+	}
 	
 //	登录处理
 	@Override
@@ -67,16 +75,36 @@ public class LoginAction extends ActionSupport{
 				temp = false;
 			}
 			
+			
 		}
 		transaction.commit();
 		session.close();
 		sessionFactory.close();
 		
+		ActionContext actionContext = ActionContext.getContext();
+		//通过ActionContext访问application范围的属性值
+		Integer counter = (Integer)actionContext.getApplication().get("counter");
+		if (counter == null) {
+			counter = 1;
+		}else{
+			counter = counter + 1;
+		}
+		
+		//通过ActionContext设置application的属性
+		actionContext.getApplication().put("counter", counter);
+		//通过ActionContext设置Session范围的属性
+		actionContext.getSession().put("user", getUsername());
+		
 		if (temp) {
+			actionContext.put("tip", "服务器提示，成功登录");
 			return SUCCESS;
 		}else {
+			actionContext.put("tip", "服务器提示，登录失败");
 			return ERROR;
 		}
+		
+		
+		
 		
 	}
 	

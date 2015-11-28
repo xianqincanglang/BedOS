@@ -14,11 +14,16 @@
 	<constant name="struts.locale" value="zh_CN"></constant>
 	<!-- 所有的Action定义都应该放在package下 -->
 	<package name="chen" extends="struts-default">
-		<action name="login" class="com.chen.LoginAction">
+		<action name="chen" class="com.chen.LoginAction">
 			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
 			<result name="input">/jsp/login/login.jsp</result>
 			<result name="error">/jsp/login/login_fail.jsp</result>
-			<result name="success">/jsp/back_index.jsp</result>
+			<result name="success" type="">/jsp/back_index.jsp</result>
+			
+			
 		</action>
+		
+			
 	</package>
+	
 </struts>
