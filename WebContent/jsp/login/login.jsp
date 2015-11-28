@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form action="login">
+	<form action="chen" method="post">
 		用户名:<input type="text" name="username" /><br/>
 		密码:<input type="password" name="password"><br/>
 		<input type="submit" value="登录">
@@ -25,5 +25,7 @@
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
 	 --%>
+	 
+	 <s:property value="exceptionStack"/>
 </body>
 </html>
