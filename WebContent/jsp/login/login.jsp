@@ -9,23 +9,13 @@
 </head>
 <body>
 
-	<form action="chen" method="post">
+	<form action="loginAction" method="post">
 		用户名:<input type="text" name="username" /><br/>
 		密码:<input type="password" name="password"><br/>
 		<input type="submit" value="登录">
 		
 	</form>
-	<%-- <s:form action="login" enctype="multipart/form-data" method="post">
-		<s:textfield name="username" key="user"></s:textfield>
-		<s:textfield name="password" key="password"></s:textfield>
-		<s:submit key="login"></s:submit>
-	</s:form>	
-	
-	<%
-		request.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("utf-8");
-	 --%>
-	 
+
 	 <s:property value="exceptionStack"/>
 </body>
 </html>

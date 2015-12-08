@@ -8,7 +8,7 @@
 		omit-xml-declaration="true" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link type="text/css" rel="stylesheet" href="css/back_index_top.css"/>
+<link type="text/css" rel="stylesheet" href="/BedOS/css/back_index_top.css"/>
 </head>
 <body>
 	<!-- 顶部 -->

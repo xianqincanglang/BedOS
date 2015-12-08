@@ -6,9 +6,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Insert title here</title>
-		<link href="css/back_index.css" type="text/css" rel="stylesheet"/>
-		<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
-		<script type="text/javascript" src="js/back_index_left.js"></script>
+		<link href="/BedOS/css/back_index.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="/BedOS/js/jquery-1.3.2.js"></script>
+		<script type="text/javascript" src="/BedOS/js/back_index_left.js"></script>
 	</head>
 	<body>
 		<div class="body">

@@ -61,6 +61,10 @@
     color: #277fc2;
 }
 
+.subNavTitle a{
+	text-decoration: none;	
+}
+
 .currentDd{
     color: #277fc2;
 }
@@ -90,4 +94,8 @@
 .navContent li a:hover{
     color: #ffffff;
     background-color: #277fc2;
+}
+
+.subNavBox{
+	text-decoration: none;
 }

@@ -8,14 +8,14 @@
 		omit-xml-declaration="true" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<link href="css/back_index_right_top.css" type="text/css" rel="stylesheet"/>
+	<link href="/BedOS/css/back_index_right_top.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 	<div id="middle_right">
 			<div class="right_content_title">
 				<div class="rightTip">
 					<ul class="tip">
-						<li><img src="images/back_index/back_index.png" alt="#"></img></li>
+						<li><img src="/BedOS/images/back_index/back_index.png" alt="#"></img></li>
 						<li><span>控制台</span></li>
 					</ul>
 				</div>
@@ -24,6 +24,10 @@
 						<input type="text" name="search"/>
 					</form>
 				</div>
+				
+			</div>
+			<div>
+				<h3>等待开发</h3>
 			</div>
 		</div>
 </body>

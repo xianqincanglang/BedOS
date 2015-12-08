@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2015-11-27 20:15:26 by Hibernate Tools 4.0.0 -->
+<!-- Generated 2015-12-7 18:32:22 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="hibernate.Repair" table="repair" catalog="bedos">
         <id name="id" type="java.lang.Integer">
@@ -9,19 +9,43 @@
             <generator class="identity" />
         </id>
         <property name="content" type="string">
-            <column name="content" length="65535" not-null="true" />
+            <column name="content" length="65535" not-null="true">
+                <comment>&#230;&#138;&#165;&#228;&#191;&#174;&#230;&#131;&#133;&#229;&#134;&#181;</comment>
+            </column>
         </property>
-        <property name="date" type="date">
-            <column name="date" length="10" not-null="true" />
+        <property name="date" type="string">
+            <column name="date" length="41" not-null="true">
+                <comment>&#230;&#138;&#165;&#228;&#191;&#174;&#230;&#151;&#165;&#230;&#156;&#159;</comment>
+            </column>
         </property>
         <property name="floorNum" type="string">
-            <column name="floor_num" length="3" not-null="true" />
+            <column name="floor_num" length="3" not-null="true">
+                <comment>&#230;&#138;&#165;&#228;&#191;&#174;&#230;&#165;&#188;&#229;&#143;&#183;</comment>
+            </column>
         </property>
         <property name="dormNum" type="string">
-            <column name="dorm_num" length="3" not-null="true" />
+            <column name="dorm_num" length="3" not-null="true">
+                <comment>&#230;&#138;&#165;&#228;&#191;&#174;&#229;&#174;&#191;&#232;&#136;&#141;&#229;&#143;&#183;</comment>
+            </column>
         </property>
         <property name="tel" type="string">
-            <column name="tel" length="11" not-null="true" />
+            <column name="tel" length="11" not-null="true">
+                <comment>&#230;&#138;&#165;&#228;&#191;&#174;&#228;&#186;&#186;&#232;&#129;&#148;&#231;&#179;&#187;&#231;&#148;&#181;&#232;&#175;&#157;</comment>
+            </column>
+        </property>
+        <property name="isPassed" type="string">
+            <column name="is_passed" length="2" not-null="true">
+                <comment>
+                1&#239;&#188;&#154;&#229;&#174;&#161;&#230;&#160;&#184;&#233;&#128;&#154;&#232;&#191;&#135;&#239;&#188;&#140;&#229;&#141;&#179;&#230;&#156;&#137;&#232;&#191;&#153;&#231;&#167;&#141;&#230;&#131;&#133;&#229;&#134;&#181;
+                0
+                &#239;&#188;&#154;&#229;&#174;&#161;&#230;&#160;&#184;&#228;&#184;&#141;&#233;&#128;&#154;&#232;&#191;&#135;&#239;&#188;&#140;&#229;&#141;&#179;&#230;&#178;&#161;&#230;&#156;&#137;&#232;&#191;&#153;&#231;&#167;&#141;&#230;&#131;&#133;&#229;&#134;&#181;</comment>
+            </column>
+        </property>
+        <property name="isSolved" type="string">
+            <column name="is_solved" length="2" not-null="true">
+                <comment>1&#239;&#188;&#154;&#232;&#167;&#163;&#229;&#134;&#179; 0
+                &#239;&#188;&#154;&#230;&#178;&#161;&#230;&#156;&#137;&#232;&#167;&#163;&#229;&#134;&#179;</comment>
+            </column>
         </property>
     </class>
 </hibernate-mapping>

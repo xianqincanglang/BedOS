@@ -1,5 +1,8 @@
-package com.chen;
+package action;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,6 +16,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import hibernate.AdminInfo;
+import hibernate.LoginInfo;
 
 public class LoginAction extends ActionSupport{
 	/**
@@ -47,10 +51,17 @@ public class LoginAction extends ActionSupport{
 	}
 	
 //	登录处理
+	
+	HttpServletRequest request = ServletActionContext.getRequest();
+	
+	
 	@Override
 	public String execute() throws Exception {
-
 		
+		
+		
+		
+		System.out.println("请求是:"+request);
 		//实例化configuration，并默认加载hibernate.cfg.xml文件
 		Configuration configuration = new Configuration().configure();
 		//创建session
@@ -59,8 +70,9 @@ public class LoginAction extends ActionSupport{
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
 		
-		AdminInfo adminInfo = new AdminInfo();
-		Query query = session.createQuery("select p.pwd from AdminInfo as p where p.name='admin'");
+		
+		LoginInfo loginInfo = new LoginInfo();
+		Query query = session.createQuery("select p.loginPwd from LoginInfo as p where p.loginId='admin'");
 		
 		java.util.List list = query.list();
 		
@@ -69,6 +81,10 @@ public class LoginAction extends ActionSupport{
 			String pwd = (String)list.get(i);
 			if (pwd.equals(getPassword())) {
 				System.out.println(pwd+"++++++++");
+				
+				request.setAttribute("loginId", "admin");
+				
+				
 				temp = true;
 			}else{
 				System.out.println("--------");
@@ -81,25 +97,9 @@ public class LoginAction extends ActionSupport{
 		session.close();
 		sessionFactory.close();
 		
-		ActionContext actionContext = ActionContext.getContext();
-		//通过ActionContext访问application范围的属性值
-		Integer counter = (Integer)actionContext.getApplication().get("counter");
-		if (counter == null) {
-			counter = 1;
-		}else{
-			counter = counter + 1;
-		}
-		
-		//通过ActionContext设置application的属性
-		actionContext.getApplication().put("counter", counter);
-		//通过ActionContext设置Session范围的属性
-		actionContext.getSession().put("user", getUsername());
-		
 		if (temp) {
-			actionContext.put("tip", "服务器提示，成功登录");
 			return SUCCESS;
 		}else {
-			actionContext.put("tip", "服务器提示，登录失败");
 			return ERROR;
 		}
 		

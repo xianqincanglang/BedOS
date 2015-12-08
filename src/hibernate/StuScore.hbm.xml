@@ -1,24 +1,28 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2015-11-27 20:15:26 by Hibernate Tools 4.0.0 -->
+<!-- Generated 2015-12-7 18:32:22 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="hibernate.StuScore" table="stu_score" catalog="bedos">
         <id name="stuNum" type="string">
-            <column name="stu_num" length="10" />
+            <column name="stu_num" length="11" />
             <generator class="assigned" />
         </id>
-        <property name="name" type="string">
-            <column name="name" length="5" not-null="true" />
-        </property>
         <property name="score" type="int">
-            <column name="score" not-null="true" />
+            <column name="score" not-null="true">
+                <comment>&#229;&#173;&#166;&#231;&#148;&#159;&#229;&#136;&#134;&#230;&#149;&#176;</comment>
+            </column>
         </property>
-        <property name="cose" type="string">
-            <column name="cose" length="65535" not-null="true" />
+        <property name="conditiion" type="string">
+            <column name="conditiion" length="65535" not-null="true">
+                <comment>&#229;&#173;&#166;&#231;&#148;&#159;&#232;&#191;&#157;&#231;&#186;&#170;&#230;&#131;&#133;&#229;&#134;&#181;</comment>
+            </column>
         </property>
-        <property name="date" type="date">
-            <column name="date" length="10" not-null="true" />
+        <property name="date" type="string">
+            <column name="date" length="41" not-null="true">
+                <comment>
+                &#232;&#191;&#157;&#231;&#186;&#170;&#230;&#151;&#165;&#230;&#156;&#159;&#239;&#188;&#140;&#228;&#187;&#165;&#230;&#151;&#182;&#233;&#151;&#180;&#230;&#136;&#179;&#231;&#154;&#132;&#229;&#189;&#162;&#229;&#188;&#143;&#229;&#173;&#152;&#230;&#148;&#190;</comment>
+            </column>
         </property>
     </class>
 </hibernate-mapping>
