@@ -6,24 +6,58 @@
 
 <struts>
 
+	
+	
 	<!-- 指定全局国际化资源文件 -->
 	<constant name="struts.custom.i18n.resources" value="mess"></constant>
 	
 	<!-- 指定国际化编码所使用的字符集 -->
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
 	<constant name="struts.locale" value="zh_CN"></constant>
+	
+	
 	<!-- 所有的Action定义都应该放在package下 -->
-	<package name="chen" extends="struts-default">
-		<action name="chen" class="com.chen.LoginAction">
-			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="loginAction" class="struts.action.FindUserAction">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 
+			-->
 			<result name="input">/jsp/login/login.jsp</result>
 			<result name="error">/jsp/login/login_fail.jsp</result>
-			<result name="success" type="">/jsp/back_index.jsp</result>
-			
-			
+			<result name="success" type="">/jsp/back_index.jsp</result>		
 		</action>
 		
-			
+		<!-- 个人信息 -->
+		<action name="adminPersonalInfoAction" class="struts.action.PersonalInfoModifyAction">
+			<result name="success">/jsp/personal_info_index.jsp</result>
+		</action>
+		
+		<!-- 学生管理 -->
+		<action name="InsertStudentAction" class="struts.action.StudentManageAction">
+			<result name="success">/jsp/student_info_index.jsp</result>
+		</action>
+		<action name="ModifyStudentAction" class="struts.action.StudentManageModifyAction">
+			<result name="success">/jsp/student_info_index.jsp</result>
+		</action>
+		
+		<!--  -->
+		<!-- 违纪管理 -->
+		<!-- 添加学生违纪 -->
+		<action name="addDisStudentAction" class="struts.action.DisManageAddStudentAction">
+			<result name="success">/jsp/disManage_showStudentIndex.jsp</result>
+		</action>
+		<action name="addDisDormAction" class="struts.action.DisManageAddDormAction">
+			<result name="success">/jsp/disManage_showDormIndex.jsp</result>
+		</action>
+		
+		<!--  -->
+		<!-- 公告呢管理 -->
+		<!-- 发布公告 -->
+		<action name="noticeAddAction" class="struts.action.NoticeManageAddNoticeAction">
+			<result name="success">/jsp/noticeManage_showNoticeIndex.jsp</result>
+		</action>	
 	</package>
+
+	
+
 	
 </struts>

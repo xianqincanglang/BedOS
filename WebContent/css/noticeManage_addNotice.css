@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+.notice_add_top{
+	
+	background-color:rgb(210,210,210);
+	height: 30px;
+	padding-top:0px;
+	margin-bottom:20px;
+}
+.notice_add_form{
+	margin:0 auto;
+	width:50%;
+}

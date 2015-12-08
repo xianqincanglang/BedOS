@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+.modifyTop{
+	background-color: rgb(210,210,210);
+	height: 30px;
+	padding-top:0px;
+	margin-bottom:20px;
+		
+}
+
+
+.modifyForm{
+	
+	margin:0 auto;
+	width:50%;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-7 18:32:22 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hibernate.LoginInfo" table="login_info" catalog="bedos">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="loginId" type="string">
+            <column name="login_id" length="11" not-null="true" />
+        </property>
+        <property name="loginPwd" type="string">
+            <column name="login_pwd" length="11" not-null="true">
+                <comment>&#231;&#153;&#187;&#229;&#189;&#149;&#229;&#175;&#134;&#231;&#160;&#129;</comment>
+            </column>
+        </property>
+        <property name="isAdmin" type="string">
+            <column name="is_admin" length="2" not-null="true">
+                <comment>1&#239;&#188;&#154;&#231;&#174;&#161;&#231;&#144;&#134;&#229;&#145;&#152;
+                0&#239;&#188;&#154;&#233;&#157;&#158;&#231;&#174;&#161;&#231;&#144;&#134;&#229;&#145;&#152;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

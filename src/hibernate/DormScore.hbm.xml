@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-7 18:32:22 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hibernate.DormScore" table="dorm_score" catalog="bedos">
+        <composite-id name="id" class="hibernate.DormScoreId">
+            <key-property name="dormFloorNum" type="string">
+                <column name="dorm_floor_num" length="2" />
+            </key-property>
+            <key-property name="dormDormNum" type="string">
+                <column name="dorm_dorm_num" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="dormScore" type="int">
+            <column name="dorm_score" not-null="true">
+                <comment>&#229;&#175;&#157;&#229;&#174;&#164;&#229;&#136;&#134;&#230;&#149;&#176;</comment>
+            </column>
+        </property>
+        <property name="dormScoreCondition" type="string">
+            <column name="dorm_score_condition" length="65535" not-null="true">
+                <comment>&#229;&#175;&#157;&#229;&#174;&#164;&#232;&#191;&#157;&#231;&#186;&#170;&#230;&#131;&#133;&#229;&#134;&#181;</comment>
+            </column>
+        </property>
+        <property name="dormScoreTime" type="string">
+            <column name="dorm_score_time" length="41" not-null="true">
+                <comment>&#229;&#175;&#157;&#229;&#174;&#164;&#232;&#191;&#157;&#231;&#186;&#170;&#230;&#151;&#182;&#233;&#151;&#180;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
